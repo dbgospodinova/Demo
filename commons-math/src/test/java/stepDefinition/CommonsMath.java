@@ -9,6 +9,7 @@ public class CommonsMath {
 	private static int firstNumber=0;
 	private static int secondNumber=0;
 	private static int thirdNumber=0;
+	private static int fourthNumber=0;
 	private static int result;
 	
 	@Given("^two numbers: '(\\d+)', '(\\d+)'$")
@@ -28,6 +29,19 @@ public class CommonsMath {
 		secondNumber = second;
 	    thirdNumber = third;
 	}
+	
+	@Given("^three numbers: '(\\d+)', '(\\d+)', '(\\d+)', (\\d+)$")
+	public void three_numbers(int first, int second, int third, int fourth) throws Throwable {
+		System.out.println(first);
+		System.out.println(second);
+		System.out.println(third);
+		System.out.println(fourth);
+		firstNumber = first;
+		secondNumber = second;
+	    thirdNumber = third;
+	    fourthNumber = fourth;
+	}
+
 
 	@When("^I sum them$")
 	public void i_sum_them() throws Throwable {
@@ -38,7 +52,7 @@ public class CommonsMath {
 	public void their_sum_should_be_sum(int sum) throws Throwable {
 		int expectedResult = sum;
 		System.out.println(expectedResult);
-		result = firstNumber + secondNumber+thirdNumber;
+		result = firstNumber + secondNumber+thirdNumber+fourthNumber;
 		System.out.println(result);
 		Assert.assertEquals(expectedResult, result);
 	}
