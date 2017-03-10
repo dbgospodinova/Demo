@@ -48,7 +48,7 @@ public class CommonsMath {
 
 	}
 
-	@Then("^Their sum should be '(\\d+)'$")
+	@Then("^The result is '(\\d+)'$")
 	public void their_sum_should_be_sum(int sum) throws Throwable {
 		int expectedResult = sum;
 		System.out.println(expectedResult);
