@@ -98,7 +98,7 @@ public class CommonsMath {
 		double expectedDoubleResult = sum;
 		System.out.println(expectedDoubleResult);
 		resultDouble = firstDoubleNumber+secondDoubleNumber+thirdDoubleNumber+fourthDoubleNumber;
-		System.out.println(resultDouble);
+		System.out.println(resultDouble+"тест");
 		Assert.assertEquals(expectedDoubleResult, resultDouble);
 	}
 }
