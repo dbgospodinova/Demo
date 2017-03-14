@@ -81,24 +81,41 @@ public class CommonsMath {
 
 	@When("^I sum them$")
 	public void i_sum_them() throws Throwable {
-
+		result = firstNumber + secondNumber + thirdNumber + fourthNumber;
+		System.out.println(result);
+		resultDouble = firstDoubleNumber + secondDoubleNumber + thirdDoubleNumber + fourthDoubleNumber;
+		System.out.println(resultDouble);
+	}
+	
+	@When("^I subtract them$") 
+	public void i_subtract_them() throws Throwable {
+		result = firstNumber - secondNumber - thirdNumber - fourthNumber;
+		System.out.println(result);
+		resultDouble = firstDoubleNumber - secondDoubleNumber - thirdDoubleNumber - fourthDoubleNumber;
+		System.out.println(resultDouble);
 	}
 
 	@Then("^The result of integers is '(\\d+)'$")
-	public void the_sum_of_integers(int sum) throws Throwable {
+	public void the_result_of_integers(int sum) throws Throwable {
 		int expectedResult = sum;
 		System.out.println(expectedResult);
-		result = firstNumber + secondNumber + thirdNumber + fourthNumber;
-		System.out.println(result);
 		Assert.assertEquals(expectedResult, result);
+		firstNumber = 0;
+		secondNumber = 0;
+		thirdNumber = 0;
+		fourthNumber = 0;
+		result=0;
 	}
 
 	@Then("^The result of doubles is '(\\d+.\\d+)'$")
-	public void the_sum_of_doubles(double sum) throws Throwable {
+	public void the_result_of_doubles(double sum) throws Throwable {
 		double expectedDoubleResult = sum;
 		System.out.println(expectedDoubleResult);
-		resultDouble = firstDoubleNumber + secondDoubleNumber + thirdDoubleNumber + fourthDoubleNumber;
-		System.out.println(resultDouble);
 		Assert.assertEquals(expectedDoubleResult, resultDouble);
+		firstDoubleNumber = 0;
+		secondDoubleNumber = 0;
+		thirdDoubleNumber = 0;
+		fourthDoubleNumber = 0;
+		resultDouble=0;
 	}
 }
