@@ -12,6 +12,7 @@ public class CommonsMath {
 	private static int fourthNumber = 0;
 	private static int result;
 
+
 	private static double firstDoubleNumber = 0;
 	private static double secondDoubleNumber = 0;
 	private static double thirdDoubleNumber = 0;
