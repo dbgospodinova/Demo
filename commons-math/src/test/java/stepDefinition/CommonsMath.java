@@ -97,6 +97,7 @@ public class CommonsMath {
 
 	@Then("^The result of integers is '(\\d+)'$")
 	public void the_result_of_integers(int sum) throws Throwable {
+		try{
 		int expectedResult = sum;
 		System.out.println("The expected integer result is: " + expectedResult);
 		Assert.assertEquals(expectedResult, result);
@@ -105,6 +106,9 @@ public class CommonsMath {
 		thirdNumber = 0;
 		fourthNumber = 0;
 		result = 0;
+		} catch (Throwable e) {
+			throw e; // rethrow the exception/error that occurred
+		}
 	}
 
 	@Then("^The result of doubles is '(\\d+.\\d+)'$")
