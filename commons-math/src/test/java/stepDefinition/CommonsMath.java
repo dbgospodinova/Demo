@@ -21,25 +21,25 @@ public class CommonsMath {
 
 	@Given("^two integer numbers: '(\\d+)', '(\\d+)'$")
 	public void two_possitive_integer_numbers(int first, int second) throws Throwable {
-		System.out.println(first);
-		System.out.println(second);
+		System.out.println("First integer number is: "+first);
+		System.out.println("Second integer number is: "+second);
 		firstNumber = first;
 		secondNumber = second;
 	}
 
 	@Given("^two double numbers: '(\\d+.\\d+)', '(\\d+.\\d+)'$")
 	public void two_possitive_double_numbers(double first, double second) throws Throwable {
-		System.out.println(first);
-		System.out.println(second);
+		System.out.println("First double number is: "+first);
+		System.out.println("Second double number is: "+second);
 		firstDoubleNumber = first;
 		secondDoubleNumber = second;
 	}
 
 	@Given("^three integer numbers: '(\\d+)', '(\\d+)', '(\\d+)'$")
 	public void three_possitive_integer_numbers(int first, int second, int third) throws Throwable {
-		System.out.println(first);
-		System.out.println(second);
-		System.out.println(third);
+		System.out.println("First integer number is: "+first);
+		System.out.println("Second integer number is: "+second);
+		System.out.println("Third integer number is: "+third);
 		firstNumber = first;
 		secondNumber = second;
 		thirdNumber = third;
@@ -47,9 +47,9 @@ public class CommonsMath {
 
 	@Given("^three double numbers: '(\\d+.\\d+)', '(\\d+.\\d+)', '(\\d+.\\d+)'$")
 	public void three_possitive_double_numbers(double first, double second, double third) throws Throwable {
-		System.out.println(first);
-		System.out.println(second);
-		System.out.println(third);
+		System.out.println("First double number is: "+first);
+		System.out.println("Second double number is: "+second);
+		System.out.println("Third double number is: "+third);
 		firstDoubleNumber = first;
 		secondDoubleNumber = second;
 		thirdDoubleNumber = third;
@@ -57,23 +57,23 @@ public class CommonsMath {
 
 	@Given("^four integer numbers: '(\\d+)', '(\\d+)', '(\\d+)', (\\d+)$")
 	public void four_possitive_integer_numbers(int first, int second, int third, int fourth) throws Throwable {
-		System.out.println(first);
-		System.out.println(second);
-		System.out.println(third);
-		System.out.println(fourth);
+		System.out.println("First integer number is: "+first);
+		System.out.println("Second integer number is: "+second);
+		System.out.println("Third integer number is: "+third);
+		System.out.println("Third integer number is: "+fourth);
 		firstNumber = first;
 		secondNumber = second;
 		thirdNumber = third;
 		fourthNumber = fourth;
 	}
 
-	@Given("^four double numbers: '(\\d+.\\d+)', '(\\d+.\\d+)', '(\\d+.\\d+)', (\\d+.\\d+)$")
+	@Given("^four double numbers: '(\\d+.\\d+)', '(\\d+.\\d+)', '(\\d+.\\d+)', '(\\d+.\\d+)'$")
 	public void four_possitive_double_numbers(double first, double second, double third, double fourth)
 			throws Throwable {
-		System.out.println(first);
-		System.out.println(second);
-		System.out.println(third);
-		System.out.println(fourth);
+		System.out.println("First double number is: "+first);
+		System.out.println("Second double number is: "+second);
+		System.out.println("Third double number is: "+third);
+		System.out.println("Fourth double number is: "+fourth);
 		firstDoubleNumber = first;
 		secondDoubleNumber = second;
 		thirdDoubleNumber = third;
@@ -83,23 +83,23 @@ public class CommonsMath {
 	@When("^I sum them$")
 	public void i_sum_them() throws Throwable {
 		result = firstNumber + secondNumber + thirdNumber + fourthNumber;
-		System.out.println(result);
+		System.out.println("The sum of integers is: "+result);
 		resultDouble = firstDoubleNumber + secondDoubleNumber + thirdDoubleNumber + fourthDoubleNumber;
-		System.out.println(resultDouble);
+		System.out.println("The sum of doubles is: "+resultDouble);
 	}
 	
 	@When("^I subtract them$") 
 	public void i_subtract_them() throws Throwable {
 		result = firstNumber - secondNumber - thirdNumber - fourthNumber;
-		System.out.println(result);
+		System.out.println("The subtract of integers is: "+result);
 		resultDouble = firstDoubleNumber - secondDoubleNumber - thirdDoubleNumber - fourthDoubleNumber;
-		System.out.println(resultDouble);
+		System.out.println("The subtract of doubles is: "+resultDouble);
 	}
 
 	@Then("^The result of integers is '(\\d+)'$")
 	public void the_result_of_integers(int sum) throws Throwable {
 		int expectedResult = sum;
-		System.out.println(expectedResult);
+		System.out.println("The expected integer result is: "+expectedResult);
 		Assert.assertEquals(expectedResult, result);
 		firstNumber = 0;
 		secondNumber = 0;
@@ -111,7 +111,7 @@ public class CommonsMath {
 	@Then("^The result of doubles is '(\\d+.\\d+)'$")
 	public void the_result_of_doubles(double sum) throws Throwable {
 		double expectedDoubleResult = sum;
-		System.out.println(expectedDoubleResult);
+		System.out.println("The expected double result is: "+expectedDoubleResult);
 		Assert.assertEquals(expectedDoubleResult, resultDouble);
 		firstDoubleNumber = 0;
 		secondDoubleNumber = 0;
