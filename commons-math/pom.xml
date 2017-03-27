@@ -34,7 +34,7 @@
 				<version>1.0.4</version>
 				<configuration>
 					<server>http://localhost:8080</server>
-					<projectKey>10200</projectKey>
+					<projectKey>10004</projectKey>
 					<username>behavepro1</username>
 					<password>behavepro1</password>
 				</configuration>
