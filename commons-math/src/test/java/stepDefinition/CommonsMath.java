@@ -44,7 +44,7 @@ public class CommonsMath {
 		thirdNumber = third;
 	}
 
-	@Given("^three double numbers: '(\\d+.\\d+)', '(\\d+.\\d+)', '(\\d+.\\d+)'$")
+	@Given("^three double numbers: '(\\d+.\\d+)' , '(\\d+.\\d+)' , '(\\d+.\\d+)'$")
 	public void three_possitive_double_numbers(double first, double second, double third) throws Throwable {
 		System.out.println("First double number is: " + first);
 		System.out.println("Second double number is: " + second);
