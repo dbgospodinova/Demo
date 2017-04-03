@@ -18,7 +18,7 @@ public class CommonsMath {
 	private static double fourthDoubleNumber = 0;
 	private static double resultDouble;
 
-	@Given("^two integer numbers: '(\\d+)', '(\\d+)'$")
+	@Given("^two integer numbers '(\\d+)' '(\\d+)'$")
 	public void two_possitive_integer_numbers(int first, int second) throws Throwable {
 		System.out.println("First integer number is: " + first);
 		System.out.println("Second integer number is: " + second);
