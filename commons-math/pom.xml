@@ -33,7 +33,7 @@
 				<artifactId>behave-maven-plugin</artifactId>
 				<version>1.0.4</version>
 				<configuration>
-					<server>http://172.31.1.63:8080/</server>
+					<server>http://jira.dev.miracl.net:8080</server>
 					<projectKey>12904</projectKey>
 					<username>diana.gospodinova</username>
 					<password>ifahthu3IuPahghi</password>
